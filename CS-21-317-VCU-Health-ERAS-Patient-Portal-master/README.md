@@ -1,6 +1,6 @@
 
 # *VCU Health ERAS Patient Portal*
-## *VCU Health / VCU college of Engineering *
+## *VCU Health / VCU College of Engineering *
 ## *Short Project Description*
 Our goal with this project is to create an application for patients and healthcare workers as a guide for a patients’ pre/post op surgery. An application that is easy to navigate and access for patients to help with some of the stress they feel near their surgery and by including checklists, reminders, and basic procedure information about their surgery. We aim to help patients by providing an organized and easy place to go to for information in the form of this application.​
 
