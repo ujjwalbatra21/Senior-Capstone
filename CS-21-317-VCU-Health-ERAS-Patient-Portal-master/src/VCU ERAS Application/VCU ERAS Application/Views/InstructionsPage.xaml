@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="VCU_ERAS_Application.Views.InstructionsPage"
+            Title="Instructions"
+            UnselectedTabColor="Black"
+            SelectedTabColor="#F8B300"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+ 
+    <ContentPage Title="Diet">
+        <StackLayout>
+        <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100" Opacity="0"/>
+
+            <Label Text="Diet" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="Subtitle">
+            </Label>
+
+            <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100"/>
+
+            <Frame CornerRadius="20">
+                <Label x:Name="DietLabel" Text=""/>
+            </Frame>
+                
+            <Frame CornerRadius="20">
+                <Label  Text="" IsVisible="false"/>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Pre-Surgery">
+        <StackLayout>
+
+                <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100" Opacity="0"/>
+
+                <Label Text="Pre-Surgery" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Subtitle">
+                </Label>
+
+            <Image Source="pre_surgery_icon.png" HeightRequest="100" WidthRequest="100"/>
+
+            <Frame CornerRadius="20">
+                <Label Text="•Do bathe or shower&#10;•Wear loose fitting clothes and flat shoes&#10;•Do NOT use any recreational drugs prior to surgery (certain recreational drugs when mixed with anesthesia become lethal and could cause death)&#10;•Do NOT wear nail polish, acrylic nails, make-up, jewelry, false eyelashes, hair pieces, hairpins or clips&#10;•Do NOT shave or wax any part of your body, below your neck line, one week before surgery&#10;•Do NOT wear any body piercings"/>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="What You Need">
+        <StackLayout>
+
+            <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100" Opacity="0"/>
+
+            <Label Text="What You Need" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="Subtitle">
+            </Label>
+
+            <Image Source="what_you_need.png" HeightRequest="100" WidthRequest="100"/>
+
+            <Frame CornerRadius="20">
+                <Label Text="•Social Security Number&#10;•Insurance card, including the insurer's name and address and the patient's policy number&#10;•Photo identification, such as a driver's licence or state photo ID&#10;•Cash, check, or major credit card to pay for services not covered by insurance&#10;•Financial screening documents (if applicable)&#10;•Proof of guardianship and/or custody documents (if applicable)&#10;•Something to keep you occupied while waiting i.e. a book"/>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Day of Surgery">
+        <StackLayout >
+
+            <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100" Opacity="0"/>
+
+            <Label Text="Day of Surgery" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="Subtitle">
+            </Label>
+
+            <Image Source="surgery_icon.png" HeightRequest="100" WidthRequest="100"/>
+
+            <Frame CornerRadius="20">
+                <Label x:Name="DayOfLabel" Text=""/>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Post Surgery">
+        <StackLayout >
+
+            <Image Source="foodIcon.png" HeightRequest="100" WidthRequest="100" Opacity="0"/>
+
+            <Label Text="Post Surgery" 
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="Subtitle">
+            </Label>
+
+            <Image Source="post_surgery.png" HeightRequest="100" WidthRequest="100"/>
+
+            <Frame CornerRadius="20">
+                <Label x:Name="PostLabel" Text=""/>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VCU_ERAS_Application.Views.DetailsPage"
+             xmlns:system="clr-namespace:System;assembly=mscorlib" Title="Details">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="EditButton" Text="Edit" Clicked="OnButtonClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Frame HasShadow="True" Padding="25" CornerRadius="15" >
+                    <Label Text="Welcome! Enhanced recovery after surgery starts here!" HorizontalTextAlignment="Center" FontSize="20"/>
+                </Frame>
+
+                <Label Text = " Upcoming Surgery:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                    <Label x:Name = "SurgeryNameDetails"/>
+                </Frame>
+
+                <Label Text = " Additional Surgery Details:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                    <Label x:Name = "AltSurgeryInfo"/>
+                </Frame>
+
+                <Label Text = " Doctor Name:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                   <Label x:Name = "DoctorNameDetails"/>
+                </Frame>
+
+                <Label Text = " Surgery Date:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                   <DatePicker x:Name="SurgeryDateDetails" MinimumDate="{x:Static system:DateTime.Today}"/>
+                </Frame>
+
+                <Label Text = " Surgery Time:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                   <TimePicker x:Name = "SurgeryTime"/>
+                </Frame>
+
+                <Label Text = " Surgery Location:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                     <Label x:Name = "SurgeryLocationDetails"/>
+                </Frame>
+
+                <Label Text = " Location Phone Number:" FontAttributes="Bold" BackgroundColor="LightGray"/>
+                <Frame HasShadow="False" Padding="5">
+                     <Label x:Name = "LocationPhoneNumber"/>
+                </Frame>
+
+                <AbsoluteLayout>
+
+                    <Button x:Name="CancelButton"
+                        Text="Cancel"
+                    
+                        Clicked="Cancel_Clicked"
+                        BackgroundColor="Black"
+                        AbsoluteLayout.LayoutBounds="0.2,0,120,40"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsVisible="false"/>
+
+                    <Button x:Name="SaveButton"
+                        Text="Save"
+                   
+                        Clicked="Save_Clicked"
+                        BackgroundColor="Black"
+                        AbsoluteLayout.LayoutBounds="0.8,0,120,40"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        IsVisible="false"/>
+
+                </AbsoluteLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

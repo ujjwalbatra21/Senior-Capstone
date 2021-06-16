@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VCU_ERAS_Application.Views.PatientPortalPage"
+             Title="Patient Portal">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Image Source="foodIcon.png" HeightRequest="40" WidthRequest="40" Opacity="0"/>
+
+            <Frame CornerRadius="20">
+                <Label Text="My VCU Health Patient Portal gives you online access to your health information, lets you send a message to your provider, request prescription refills, and more. Click on the button below to get started."/>
+            </Frame>
+
+            <Button Text="Open Patient Portal"
+                WidthRequest="170"
+                VerticalOptions = "CenterAndExpand" 
+                HorizontalOptions = "Center"
+                TextColor = "Black"
+                BackgroundColor = "#F8B300"
+                Clicked="OnButtonClicked"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

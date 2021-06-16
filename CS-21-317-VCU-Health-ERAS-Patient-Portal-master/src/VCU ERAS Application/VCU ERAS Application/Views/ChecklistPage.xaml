@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VCU_ERAS_Application.Views.ChecklistPage" Title="Checklist">
+    <ContentPage.Content>  
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="  Diet" FontSize="24" />
+                    <CheckBox x:Name="checkBox1" Grid.Row="1" Grid.Column="0" Color="Gold"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Drink a 12 oz. glaass of water after your meal">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox1}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <CheckBox x:Name="checkBox2" Grid.Row="2" Grid.Column="0" Color="Gold"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="Do NOT eat anything the day of your surgery" >
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox2}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                <Label Grid.Row="3" Grid.Column="0" Text="  Activity" FontSize="24" />
+                    <CheckBox x:Name="checkBox3" Grid.Row="4" Grid.Column="0" Color="Gold"/>
+                    <Label Grid.Row="4" Grid.Column="1" Text="Start Phase 1 exercises from exercise sheet">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox3}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <CheckBox x:Name="checkBox4" Grid.Row="5" Grid.Column="0" Color="Gold" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="Shower after 48 hours from your surgery" >
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox4}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                 <Label Grid.Row="6" Grid.Column="0" Text="  Misc." FontSize="24" />
+                    <CheckBox x:Name="checkBox5" Grid.Row="7" Grid.Column="0" Color="Gold"/>
+                    <Label Grid.Row="7" Grid.Column="1" Text="Check your blood sugar level when you wake up">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox5}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+                    <CheckBox x:Name="checkBox6" Grid.Row="8" Grid.Column="0" Color="Gold"/>
+                    <Label Grid.Row="8" Grid.Column="1" Text="Do NOT eat anything the day of your surgery" >
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                Binding="{Binding Source={x:Reference checkBox6}, Path=IsChecked}" Value="true">
+                                <Setter Property="FontAttributes" Value="Bold" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:VCU_ERAS_Application.Views" xmlns:local1="clr-namespace:VCU_ERAS_Application"
+       Title="VCU_ERAS_Application"
+       x:Class="VCU_ERAS_Application.AppShell">
+    <Shell.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="#F8B300" />
+                <Setter Property="Shell.ForegroundColor" Value="Black" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#F8B300" />
+                <Setter Property="Shell.TabBarTitleColor" Value="Black" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#666666" />
+            </Style>
+
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <local1:HeaderContentView/>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Route="pages"
+                Title="VCU ERAS Application"
+                FlyoutDisplayOptions="AsMultipleItems">
+ 
+        <ShellContent Route="details"
+            Title="Details"
+            ContentTemplate="{DataTemplate local:DetailsPage}" />
+
+        <ShellContent Route="gettingstarted"
+            Title="Getting Started"
+            ContentTemplate="{DataTemplate local:GettingStartedPage}" />
+
+        <ShellContent Route="surgeryinfo"
+            Title="Surgery Info"
+            ContentTemplate="{DataTemplate local:SurgeryInfoPage}" />
+        
+        <ShellContent Route="instructions"
+            Title="Instructions"
+            ContentTemplate="{DataTemplate local:InstructionsPage}" />
+
+        <ShellContent Route="checklist"
+            Title="Checklist"
+            ContentTemplate="{DataTemplate local:ChecklistPage}" />
+        
+    </FlyoutItem>
+
+    <ShellContent Title="Patient Portal"
+        ContentTemplate="{DataTemplate local:PatientPortalPage}"               
+        Shell.TabBarTitleColor="Black"
+        Shell.BackgroundColor="#F8B300"
+        Shell.ForegroundColor="Black"
+        Shell.TitleColor="Black"/>
+
+</Shell>
